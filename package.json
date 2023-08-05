@@ -1,0 +1,29 @@
+{
+  "name": "webdevcodingchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnPatrickWood/WebDevCodingChallenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnPatrickWood/WebDevCodingChallenge/issues"
+  },
+  "homepage": "https://github.com/JohnPatrickWood/WebDevCodingChallenge#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "xml2js": "^0.6.2"
+  }
+}
