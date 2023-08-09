@@ -25,7 +25,7 @@ async function parseXmlData(xmlData) {
 router.get("/allskus", async (req, res) => {
     try {
         //Fetch the sitemap data
-        const response = await axios.get(sitemap);
+        const response = await axios.get(sitemap).catch((error) => alert("error fetching sitemap data"));
         const data = response.data;
         //Parse the XML data
         const result = await parseXmlData(data);
@@ -51,7 +51,7 @@ router.get("/allskus", async (req, res) => {
 router.get("/allurls", async (req, res) => {
     try {
         //Fetch the sitemap data
-        const response = await axios.get(sitemap);
+        const response = await axios.get(sitemap).catch((error) => alert("error fetching sitemap data"));
         const data = response.data;
         //Parse the XML data
         const result = await parseXmlData(data);
@@ -73,7 +73,7 @@ router.get("/allurls", async (req, res) => {
 router.get("/sku/:sku", async (req, res) => {
     try {
         //Fetch the sitemap data
-        const response = await axios.get(sitemap);
+        const response = await axios.get(sitemap).catch((error) => alert("error fetching sitemap data"));
         const data = response.data;
         //Parse the XML data
         const result = await parseXmlData(data);
@@ -95,7 +95,7 @@ router.get("/sku/:sku", async (req, res) => {
 
         if (urlRes) {
             //Fetch the HTML content of the product page
-            const response = await axios.get(urlRes);
+            const response = await axios.get(urlRes).catch((error) => alert("error fetching webpage data from christianbook"));
             const htmlContent = response.data;
             const $ = cheerio.load(htmlContent);
 
